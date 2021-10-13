@@ -15,7 +15,7 @@ public:
 
 	void SetThousandArray(int array, int num) 
 	{
-		if (array < 0 || array > max)
+		if (array < 0 || array >= max)
 		{
 			printf("配列外を参照しています。");
 		}
@@ -27,7 +27,7 @@ public:
 
 	int GetThousandArray(int array) 
 	{
-		if (array < 0 || array > max)
+		if (array < 0 || array >= max)
 		{
 			printf("配列外を参照しています。");
 			return 0;
