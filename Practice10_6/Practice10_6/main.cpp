@@ -11,9 +11,9 @@ public:
 
 	int GetThousandArray(int array) { return thousandArray[array]; }
 
-	void ApplyThousand()
+	void ApplyThousand(int maxNum)
 	{
-		for (int i = 0; i < 1000; i++)
+		for (int i = 0; i < maxNum; i++)
 		{
 			SetThousandArray(i, i);
 		}
@@ -26,6 +26,9 @@ private:
 int main()
 {
 	Thousand thou;
-	thou.ApplyThousand();
-	printf("%d", thou.GetThousandArray(999));
+	thou.ApplyThousand(1000);
+	for (int i = 0; i < 1000; i++)
+	{
+		printf("%d\n", thou.GetThousandArray(i));
+	}
 }
